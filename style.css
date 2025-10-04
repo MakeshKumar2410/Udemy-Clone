@@ -87,6 +87,24 @@ body{
     top: 20%;
     left: 10%;
     padding: 10px;
+    animation-name: zoom;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes zoom{
+
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
 
 }
 
@@ -96,12 +114,23 @@ body{
     justify-content: space-around;
     color: white;
     border-bottom: solid 1px black;
+   
+   
 }
 
 .categories p{
     background-color: #9339D5;
     padding: 10px;
     border-radius: 30px;
+    border: #9339D5 solid 1px;
+    cursor: pointer;
+}
+
+.categories p:hover{
+    background-color: white;
+    color: #9339D5;
+    border: solid #9339D5 1px;
+    transition: 0.5s;
 }
 
 .section-image img{
